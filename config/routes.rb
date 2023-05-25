@@ -1,6 +1,13 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :orders
+  resources :products
+  resources :categories
+  resources :suppliers
+  resources :customers
+  resources :staffs
+  resources :roles
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end
