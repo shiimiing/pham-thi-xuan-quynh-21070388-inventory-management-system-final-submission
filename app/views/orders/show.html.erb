@@ -39,11 +39,11 @@
       </li>
       <li>
         <p class="font-semibold">Product:</p>
-        <p><%= @order.product %></p>
+        <p><%= @order.product.name %></p>
       </li>
       <li>
         <p class="font-semibold">Customer:</p>
-        <p><%= @order.customer %></p>
+        <p><%= @order.customer.first_name %></p>
       </li>
   </ul>
 </div>
